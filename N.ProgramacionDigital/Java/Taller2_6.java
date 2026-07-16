@@ -6,25 +6,25 @@ public class Taller2_6 {
 
         Scanner entrada = new Scanner(System.in);
 
-        int numeroUsuario;
+        int numero;
         int factorPrimo = 2;
         String numeroImprimir = "";
 
         System.out.print("Ingrese un número: ");
-        numeroUsuario = entrada.nextInt();
+        numero = entrada.nextInt();
 
-        if (numeroUsuario < 1) {
+        if (numero < 1) {
             System.out.println("Número inválido. Ingrese un número mayor que 1");
         } else {
 
-            System.out.print("La descomposición en factores primos del número " + numeroUsuario + " es: ");
+            System.out.print("La descomposición en factores primos del número " + numero + " es: ");
 
-            while (numeroUsuario > 1) {
+            while (numero > 1) {
 
-                if (numeroUsuario % factorPrimo == 0) {
-                    numeroUsuario = numeroUsuario / factorPrimo;
+                if (numero % factorPrimo == 0) {
+                    numero = numero / factorPrimo;
 
-                    if (numeroUsuario == 1) {
+                    if (numero == 1) {
                         System.out.println(factorPrimo);
                     } else {
                         System.out.print(factorPrimo + " x ");
