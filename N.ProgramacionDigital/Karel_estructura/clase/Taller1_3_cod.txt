@@ -1,0 +1,120 @@
+iniciar-programa
+   ------------------------------------------------------------  
+
+define-nueva-instruccion mirar-izquierda como inicio
+
+   si orientado-al-oeste entonces inicio
+   fin
+   
+   sino inicio
+   gira-izquierda;
+   mirar-izquierda;
+   fin;
+
+fin;    
+------------------------------------------------------------
+define-nueva-instruccion mirar-derecha como inicio
+
+   si orientado-al-este entonces inicio
+   fin
+   
+   sino inicio
+   gira-izquierda;
+   mirar-derecha
+   fin;
+
+fin;    
+---------------------------------------------------------
+define-nueva-instruccion ir-izquierda como inicio 
+
+si frente-bloqueado entonces inicio 
+fin
+
+sino inicio
+avanza;
+ir-izquierda;
+fin;
+
+fin;
+------------------------------------------------------------
+
+define-nueva-instruccion ir-norte como inicio
+
+si frente-bloqueado entonces inicio 
+fin
+
+sino inicio
+avanza;
+ir-norte
+fin;
+
+fin;
+------------------------------------------------------------
+
+define-nueva-instruccion recoger-zumbador-hacia-sur como inicio 
+
+si junto-a-zumbador entonces inicio
+coge-zumbador;
+fin;
+
+si frente-bloqueado entonces inicio 
+gira-izquierda;
+avanza;
+fin
+
+sino inicio
+avanza;
+recoger-zumbador-hacia-sur
+fin;
+
+fin;
+------------------------------------------------------------
+
+define-nueva-instruccion recoger-zumbador-hacia-norte como inicio 
+
+si junto-a-zumbador entonces inicio
+coge-zumbador;
+fin;
+
+si frente-bloqueado entonces inicio 
+gira-izquierda;
+gira-izquierda;
+gira-izquierda;
+avanza;
+fin
+
+sino inicio
+avanza;
+recoger-zumbador-hacia-norte
+fin;
+
+fin;
+------------------------------------------------------------
+
+define-nueva-instruccion recoger-todo como inicio
+
+mientras frente-libre hacer inicio
+si frente-bloqueado y orientado-al-
+recoger-zumbador-hacia-sur;
+gira-izquierda;
+recoger-zumbador-hacia-norte;
+fin;
+
+fin;
+------------------------------------------------------------
+
+    inicia-ejecucion
+    mirar-izquierda;
+    ir-izquierda;}
+    repetir 3 veces inicio
+        gira-izquierda;
+        fin;
+        ir-norte;
+        repetir 2veces inicio
+        gira-izquierda;
+        fin;
+        recoger-todo;
+           
+        apagate;
+    termina-ejecucion
+finalizar-programa

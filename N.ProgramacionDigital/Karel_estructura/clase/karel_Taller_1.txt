@@ -1,0 +1,91 @@
+iniciar-programa
+   	define-nueva-instruccion infinito como inicio
+    	mientras frente-libre hacer inicio
+        	avanza;
+        fin;
+    fin;
+
+   	define-nueva-instruccion gira-derecha como inicio
+        	gira-izquierda;
+            avanza;
+        	repetir 3 veces inicio
+            	gira-izquierda; 
+            fin;    
+        fin;  
+        
+   	define-nueva-instruccion entrar como inicio
+    	si frente-libre entonces inicio
+        	avanza;     
+        fin;
+    fin;
+    
+   	define-nueva-instruccion gira-tres como inicio
+        	repetir 3 veces inicio
+            	gira-izquierda; 
+            fin;    
+        fin; 
+        
+   	define-nueva-instruccion gira-dos como inicio
+        	repetir 2 veces inicio
+            	gira-izquierda; 
+            fin;    
+        fin; 
+        
+  	define-nueva-instruccion avanzar como inicio
+        	avanza;
+            fin;    
+            
+   	define-nueva-instruccion gira-derecha1 como inicio
+   		 repetir 3 veces
+        	gira-izquierda;
+            avanza;
+        fin;
+        
+        
+        
+   
+    
+	inicia-ejecucion   
+ infinito;
+ gira-derecha;
+ entrar;
+ gira-tres;
+ infinito;
+ gira-derecha;
+ gira-dos;
+ avanzar;
+ gira-derecha1;
+ entrar;
+ gira-tres;
+ infinito;
+ gira-derecha;
+ gira-dos;
+ avanzar;
+ gira-derecha1;
+ gira-tres;
+ infinito;
+ gira-derecha;
+ gira-dos;
+ avanzar;
+ gira-tres;
+ entrar;
+ gira-tres;
+ infinito;
+ gira-derecha;
+ gira-dos;
+ avanzar;
+ gira-tres;
+ entrar;
+ gira-tres;
+ infinito;
+ gira-derecha;
+ gira-dos;
+ 
+
+ 
+
+ 
+ 
+        apagate;
+    termina-ejecucion
+finalizar-programa

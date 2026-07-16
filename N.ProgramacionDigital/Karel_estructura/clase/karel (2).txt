@@ -1,0 +1,18 @@
+iniciar-programa
+    inicia-ejecucion
+    	si frente-libre entonces inicio
+        	avanza;
+        fin
+        sino inicio
+        	repetir 3 veces inicio
+            	gira-izquierda;
+                fin;
+                repetir 3 veces inicio
+                	avanza;
+                    gira-izquierda;
+            fin;
+        fin;
+       
+        apagate;
+    termina-ejecucion
+finalizar-programa

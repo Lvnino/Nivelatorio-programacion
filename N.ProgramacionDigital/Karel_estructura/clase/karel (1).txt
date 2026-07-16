@@ -1,0 +1,64 @@
+iniciar-programa
+    inicia-ejecucion
+        avanza;
+        si junto-a-zumbador entonces inicio
+        	coge-zumbador;
+        fin;
+        avanza;
+        repetir 3 veces inicio
+        	gira-izquierda;
+        fin;
+        avanza;
+        si junto-a-zumbador entonces inicio
+        	coge-zumbador;
+        fin;
+        avanza;
+        gira-izquierda;
+        avanza;
+        si junto-a-zumbador entonces inicio
+        	coge-zumbador;
+        fin;
+        avanza;
+        repetir 3 veces inicio
+        	gira-izquierda;
+        fin;
+        avanza;
+        si junto-a-zumbador entonces inicio
+        	coge-zumbador;
+        fin;
+        gira-izquierda;
+        avanza;
+        gira-izquierda;
+        avanza; 
+        si junto-a-zumbador entonces inicio
+        	coge-zumbador;
+        fin;
+        avanza;
+        repetir 3 veces inicio
+        	gira-izquierda;
+        fin;
+        avanza;
+        si junto-a-zumbador entonces inicio
+        	coge-zumbador;
+        fin;
+        avanza;
+        gira-izquierda;
+        avanza;
+        si junto-a-zumbador entonces inicio
+        	coge-zumbador;
+        fin;
+        repetir 2 veces inicio
+        	gira-izquierda;
+        fin;
+        avanza;
+        gira-izquierda;
+        avanza;
+        gira-izquierda;
+        avanza;
+        mientras algun-zumbador-en-la-mochila hacer inicio
+        	deja-zumbador;
+        fin;
+
+        apagate;
+    termina-ejecucion
+finalizar-programa
