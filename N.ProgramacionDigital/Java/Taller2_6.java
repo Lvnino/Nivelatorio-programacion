@@ -2,16 +2,9 @@ import java.util.Scanner;
 
 public class Taller2_6 {
 
-    public static void main(String[] args) {
+    public static void factoresPrimos(int numero) {
 
-        Scanner entrada = new Scanner(System.in);
-
-        int numero;
-        int factorPrimo = 2;
-        String numeroImprimir = "";
-
-        System.out.print("Ingrese un número: ");
-        numero = entrada.nextInt();
+        int factor = 2;
 
         if (numero < 1) {
             System.out.println("Número inválido. Ingrese un número mayor que 1");
@@ -21,22 +14,35 @@ public class Taller2_6 {
 
             while (numero > 1) {
 
-                if (numero % factorPrimo == 0) {
-                    numero = numero / factorPrimo;
+                if (numero % factor == 0) {
+
+                    numero /= factor;
 
                     if (numero == 1) {
-                        System.out.println(factorPrimo);
+                        System.out.println(factor);
                     } else {
-                        System.out.print(factorPrimo + " x ");
+                        System.out.print(factor + " x ");
                     }
 
                 } else {
-                    factorPrimo++;
+
+                    factor++;
+
                 }
 
             }
 
         }
+    }
+
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Ingrese un número: ");
+        int numero = entrada.nextInt();
+
+        factoresPrimos(numero);
 
         entrada.close();
     }
