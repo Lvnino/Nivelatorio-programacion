@@ -1,23 +1,26 @@
-numeroNuevo = 0
-iterador = 0
-sumaResiduoCero = 0
+numero = int(input("Ingrese un número: "))
 
-print("Ingresa un número: ")
-numeroNuevo = int(input())
+if numero <= 1:
 
-if numeroNuevo <= 1:
-    print("El número", numeroNuevo, "no es primo")
+    print("El número", numero, "no es primo")
+
 else:
-    iterador = 1
-    sumaResiduoCero = 0
 
-    while iterador <= numeroNuevo:
-        if numeroNuevo % iterador == 0:
-            sumaResiduoCero = sumaResiduoCero + 1
+    divisor = 1
+    cantidadDivisores = 0
 
-        iterador = iterador + 1
+    while divisor <= numero:
 
-    if sumaResiduoCero == 2:
-        print("El número", numeroNuevo, "es primo")
+        if numero % divisor == 0:
+
+            cantidadDivisores = cantidadDivisores + 1
+
+        divisor = divisor + 1
+
+    if cantidadDivisores == 2:
+
+        print("El número", numero, "es primo")
+
     else:
-        print("El número", numeroNuevo, "no es primo") # solo esta ejecutandose para 1 numero
+
+        print("El número", numero, "no es primo")

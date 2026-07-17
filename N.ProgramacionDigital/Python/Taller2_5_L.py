@@ -1,49 +1,58 @@
 def MCM(a, b):
+
     numeroA = a
     numeroB = b
 
     if a < b:
-        auxiliar = a
+        temporal = a
         a = b
-        b = auxiliar
+        b = temporal
 
     residuo = a % b
 
     while residuo > 0:
-        auxiliar = b
+
+        temporal = b
         b = residuo
-        a = auxiliar
+        a = temporal
+
         residuo = a % b
 
-    resultadoMCM = (numeroA * numeroB) // b
-    return resultadoMCM
+    return (numeroA * numeroB) // b
 
 
 acumuladoMCM = 0
-calculoMCM = 0
-numeroNuevo = 0
+numero = 0
 
 primerNumero = True
 entradaCiclo = True
 hayNumeros = False
 
-while entradaCiclo == True:
-    print("Ingresa un número: ")
-    numeroNuevo = int(input())
+while entradaCiclo:
 
-    if numeroNuevo > 0:
-        if primerNumero == True:
-            acumuladoMCM = numeroNuevo
+    numero = int(input("Ingrese un número: "))
+
+    if numero > 0:
+
+        if primerNumero:
+
+            acumuladoMCM = numero
             primerNumero = False
+
         else:
-            calculoMCM = MCM(acumuladoMCM, numeroNuevo)
-            acumuladoMCM = calculoMCM
+
+            acumuladoMCM = MCM(acumuladoMCM, numero)
 
         hayNumeros = True
+
     else:
+
         entradaCiclo = False
 
-if hayNumeros == True:
+if hayNumeros:
+
     print("El MCM de los números ingresados antes del número inválido es:", acumuladoMCM)
+
 else:
+
     print("No se ingresaron números válidos")

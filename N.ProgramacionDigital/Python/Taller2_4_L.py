@@ -1,50 +1,55 @@
 def MCD(a, b):
 
     if a < b:
-        auxiliar = a
+        temporal = a
         a = b
-        b = auxiliar
+        b = temporal
 
     residuo = a % b
 
     while residuo > 0:
-        auxiliar = b
+
+        temporal = b
         b = residuo
-        a = auxiliar
+        a = temporal
+
         residuo = a % b
 
     return b
 
 
 acumuladoMCD = 0
-calculoMCD = 0
-numeroNuevo = 0
+numero = 0
 
 primerNumero = True
 entradaCiclo = True
 hayNumeros = False
 
-while entradaCiclo == True:
+while entradaCiclo:
 
-    print("Ingresa un número: ")
-    numeroNuevo = int(input())
+    numero = int(input("Ingrese un número: "))
 
-    if numeroNuevo > 0:
+    if numero > 0:
 
-        if primerNumero == True:
-            acumuladoMCD = numeroNuevo
+        if primerNumero:
+
+            acumuladoMCD = numero
             primerNumero = False
 
         else:
-            calculoMCD = MCD(acumuladoMCD, numeroNuevo)
-            acumuladoMCD = calculoMCD
+
+            acumuladoMCD = MCD(acumuladoMCD, numero)
 
         hayNumeros = True
 
     else:
+
         entradaCiclo = False
 
-if hayNumeros == True:
+if hayNumeros:
+
     print("El MCD de los números ingresados antes del número inválido es:", acumuladoMCD)
+
 else:
+
     print("No se ingresaron números válidos")
