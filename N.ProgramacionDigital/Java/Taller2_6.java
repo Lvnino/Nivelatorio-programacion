@@ -2,12 +2,20 @@ import java.util.Scanner;
 
 public class Taller2_6 {
 
-    public static void factoresPrimos(int numero) {
+    public static void factoresPrimos() {
 
+        Scanner entrada = new Scanner(System.in);
+
+        int numero;
         int factor = 2;
 
+        System.out.print("Ingrese un número: ");
+        numero = entrada.nextInt();
+
         if (numero < 1) {
+
             System.out.println("Número inválido. Ingrese un número mayor que 1");
+
         } else {
 
             System.out.print("La descomposición en factores primos del número " + numero + " es: ");
@@ -16,7 +24,7 @@ public class Taller2_6 {
 
                 if (numero % factor == 0) {
 
-                    numero /= factor;
+                    numero = numero / factor;
 
                     if (numero == 1) {
                         System.out.println(factor);
@@ -26,24 +34,21 @@ public class Taller2_6 {
 
                 } else {
 
-                    factor++;
+                    factor = factor + 1;
 
                 }
 
             }
 
         }
+
+        entrada.close();
+
     }
 
     public static void main(String[] args) {
 
-        Scanner entrada = new Scanner(System.in);
+        factoresPrimos();
 
-        System.out.print("Ingrese un número: ");
-        int numero = entrada.nextInt();
-
-        factoresPrimos(numero);
-
-        entrada.close();
     }
 }
